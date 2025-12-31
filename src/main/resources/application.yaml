@@ -1,0 +1,21 @@
+server:
+    port: 8089
+
+spring:
+  application:
+    name: spring-redis-server
+  data:
+    mongodb:
+        uri: mongodb://localhost:27017
+  redis:
+    url: redis://localhost:6379
+  cache:
+    type: redis
+
+#Eureka Client Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
